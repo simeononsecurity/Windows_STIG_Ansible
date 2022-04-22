@@ -1,5 +1,5 @@
 # Windows-Harden-Ansible
-An ansible playbook collection for my Various Windows STIG Scripts
+Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
 
 ## Usage
