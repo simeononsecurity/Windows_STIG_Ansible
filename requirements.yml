@@ -1,7 +1,0 @@
----
-collections:
-- name:
-  - chocolatey.chocolatey
-  - ansible.windows.win_powershell
-  - community.windows.psexec
-  - community.windows.win_psexec
