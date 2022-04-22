@@ -1,0 +1,5 @@
+---
+- name: Run the Adobe Reader DC STIG
+  hosts: all
+  roles: 
+    - adobe-reader-dc-stig

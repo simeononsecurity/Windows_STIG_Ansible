@@ -1,0 +1,5 @@
+---
+- name: Run STIG Compliant Domain Prep
+  hosts: all
+  roles: 
+    - stig-compliant-domain-prep

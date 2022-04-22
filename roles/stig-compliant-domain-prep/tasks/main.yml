@@ -1,0 +1,27 @@
+---
+# tasks file for base
+- name: Create required folders
+  ansible.windows.win_file:
+    path: C:/temp/"{{ git }}"
+    state: directory
+
+- name: Download Github Repo "{{ gitrepo }}"
+  ansible.builtin.git:
+    repo: "{{ gitrepo }}"
+    dest: C:/temp/"{{ git }}"
+  environment:
+    GIT_TERMINAL_PROMPT: 0
+
+- name: Run PowerShell script that modifies the module changed result
+  ansible.windows.win_powershell:
+    chdir: C:/temp/"{{ git }}"
+    script: |
+      try{
+      
+        powershell.exe -ExecutionPolicy ByPass -File C:/temp/"{{ git }}"/*.ps1
+
+      } Catch {
+
+        $Ansible.failed = $true
+
+      }  

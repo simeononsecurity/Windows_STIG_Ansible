@@ -1,0 +1,5 @@
+---
+- name: Run the Oracle JRE8 STIG
+  hosts: all
+  roles: 
+    - oracle-jre8-stig

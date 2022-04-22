@@ -1,0 +1,6 @@
+---
+# vars file for base
+gitrepo:
+  - https://github.com/simeononsecurity/Windows-Defender-STIG-Script.git
+git:
+  - Windows-Defender-STIG-Script

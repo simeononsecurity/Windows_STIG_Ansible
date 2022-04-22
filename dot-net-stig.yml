@@ -1,0 +1,5 @@
+---
+- name: Run the Dot Net Framework 4 STIG
+  hosts: all
+  roles: 
+    - dot-net-stig

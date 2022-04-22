@@ -1,0 +1,5 @@
+---
+- name: Run the standalone Windows Server STIG Script
+  hosts: all
+  roles: 
+    - standalone-windows-server-stig

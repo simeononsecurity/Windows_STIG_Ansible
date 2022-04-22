@@ -1,0 +1,5 @@
+---
+- name: Run the FireFox STIG
+  hosts: all
+  roles: 
+    - firefox-stig

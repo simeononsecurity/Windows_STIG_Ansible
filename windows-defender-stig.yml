@@ -1,0 +1,5 @@
+---
+- name: Run the Windows Defender STIG Script
+  hosts: all
+  roles: 
+    - windows-defender-stig

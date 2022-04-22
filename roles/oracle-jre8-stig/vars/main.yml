@@ -1,0 +1,6 @@
+---
+# vars file for base
+gitrepo:
+  - https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script.git
+git:
+  - Oracle-JRE-8-STIG-Script
