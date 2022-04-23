@@ -1,5 +1,19 @@
 ---
 # tasks file for base
+
+- name: check if python is already installed
+  ansible.windows.win_powershell:
+    script: python
+  register: python_already_exists
+  ignore_errors: yes
+
+- name: Installing python using Chocolatey
+  chocolatey.chocolatey.win_chocolatey:
+    name: python
+    state: present
+    version: latest
+    allow_empty_checksums: yes
+
 - name: Download Github Repo "{{ gitrepo }}"
   ansible.builtin.git:
     repo: "{{ gitrepo }}"
@@ -20,3 +34,9 @@
         $Ansible.failed = $true
 
       }  
+
+- name: Uninstall python using Chocolatey
+  chocolatey.chocolatey.win_chocolatey:
+    name: python
+    state: absent
+  when: python_already_exists = null
