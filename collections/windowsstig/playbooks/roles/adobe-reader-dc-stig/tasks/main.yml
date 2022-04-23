@@ -9,7 +9,7 @@
   ansible.builtin.debug:
     msg: "Gitname is {{ gitname }}"
   ansible.builtin.debug:
-    msg: "Zipdir is {{ ziprepo }}"
+    msg: "Zipdir is {{ zipdir }}"
 
 - name: Download STIG files to specified path
   ansible.windows.win_get_url:
