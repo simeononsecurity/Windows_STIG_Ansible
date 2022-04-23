@@ -3,7 +3,7 @@
 
 - name: Check if python is already installed
   ansible.windows.win_powershell:
-    script: try{python -v; write-output $true}catch{write-output $false}
+    script: try{python -v; write-output "true"}catch{write-output "false"}
   register: python_already_exists
   ignore_errors: yes
 
@@ -12,6 +12,7 @@
     name: python
     state: present
     allow_empty_checksums: yes
+  ignore_errors: yes
   when: python_already_exists != true
 
 - name: Download Github Repo "{{ gitrepo }}"
@@ -21,7 +22,7 @@
   environment:
     GIT_TERMINAL_PROMPT: 0
 
-- name: Run PowerShell script that modifies the module changed result
+- name: Run the STIG Script
   ansible.windows.win_powershell:
     chdir: "{{ gitdir }}"
     script: |
