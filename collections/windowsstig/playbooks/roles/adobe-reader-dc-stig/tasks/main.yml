@@ -3,7 +3,7 @@
 
 - name: check if python is already installed
   ansible.windows.win_powershell:
-    script: try{python -v;$true}catch{$false}
+    script: try{python -v; write-output $true}catch{write-output $false}
   register: python_already_exists
   ignore_errors: yes
 
