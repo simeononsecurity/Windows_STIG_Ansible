@@ -41,6 +41,7 @@
     script: |
       try{
         foreach ($script in (Get-Childitem -recurse *.ps1).fullname){
+          Write-Output executing $script
           powershell.exe -ExecutionPolicy ByPass -File "$script"
         }
       } Catch {
