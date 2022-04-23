@@ -1,10 +1,5 @@
 ---
 # tasks file for base
-- name: Create required folders
-  ansible.windows.win_file:
-    path: "{{ gitdir }}"
-    state: directory
-
 - name: Download Github Repo "{{ gitrepo }}"
   ansible.builtin.git:
     repo: "{{ gitrepo }}"
