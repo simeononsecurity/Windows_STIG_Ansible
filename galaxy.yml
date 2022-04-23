@@ -19,4 +19,7 @@ license_file:
     - LICENSE
 tags:
     - collection
+    - windows
+    - chocolatey
+    - package
 repository: "https://github.com/simeononsecurity/Windows_STIG_Ansible"
