@@ -1,11 +1,6 @@
 ---
 # vars file for base
-vars:
-  gitrepo:
-    - "https://github.com/simeononsecurity/Adobe-Reader-DC-STIG-Script/archive/refs/heads/master.zip"
-  gitdir:
-    - "C:\\temp\\master.zip"
-  gitname:
-    - "Adobe-Reader-DC-STIG-Script"
-  zipdir:
-    - "C:\\temp\\{{ gitname }}"
+  gitrepo: "https://github.com/simeononsecurity/Adobe-Reader-DC-STIG-Script/archive/refs/heads/master.zip"
+  gitdir: "C:\\temp\\master.zip"
+  gitname: "Adobe-Reader-DC-STIG-Script"
+  zipdir: "C:\\temp\\{{ gitname }}"
