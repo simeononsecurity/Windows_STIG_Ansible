@@ -4,4 +4,3 @@ gitrepo:
   - https://github.com/simeononsecurity/Adobe-Reader-DC-STIG-Script.git
 gitdir:
   - C:\temp\Adobe-Reader-DC-STIG-Script
-none: ""

@@ -3,7 +3,7 @@
 
 - name: check if python is already installed
   ansible.windows.win_powershell:
-    script: python -v
+    script: try{python -v;$true}catch{$false}
   register: python_already_exists
   ignore_errors: yes
 
@@ -12,7 +12,7 @@
     name: python
     state: present
     allow_empty_checksums: yes
-  when: python_already_exists = {{ none }}
+  when: python_already_exists = $false
 
 - name: Download Github Repo "{{ gitrepo }}"
   ansible.builtin.git:
@@ -39,4 +39,4 @@
   chocolatey.chocolatey.win_chocolatey:
     name: python
     state: absent
-  when:  python_already_exists = {{ none }}
+  when:  python_already_exists = $false
