@@ -3,8 +3,8 @@
 gitrepo:
   - "https://github.com/simeononsecurity/Adobe-Reader-DC-STIG-Script/archive/refs/heads/master.zip"
 gitdir:
-  - "{{ ansible_env.TEMP }}\\master.zip"
+  - "C:\\temp\\master.zip"
 gitname:
   - "Adobe-Reader-DC-STIG-Script"
 zipdir:
-  - "{{ ansible_env.TEMP }}\\{{ gitname }}"
+  - "C:\\temp\\{{ gitname }}"
