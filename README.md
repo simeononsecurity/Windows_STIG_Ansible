@@ -1,4 +1,4 @@
-# Windows-Harden-Ansible
+#  Windows_STIG_Ansible
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
 
