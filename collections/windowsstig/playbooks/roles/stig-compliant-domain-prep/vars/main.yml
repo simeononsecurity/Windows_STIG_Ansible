@@ -1,6 +1,6 @@
 ---
 # vars file for base
 gitrepo: "https://github.com/simeononsecurity/STIG-Compliant-Domain-Prep/archive/refs/heads/master.zip"
-gitdir: " C:\\temp\\master.zip"
+gitdir: "C:\\temp\\master.zip"
 gitname: "STIG-Compliant-Domain-Prep"
-zipdir: " C:\\temp\\{{ gitname }}"
+zipdir: "C:\\temp\\{{ gitname }}"

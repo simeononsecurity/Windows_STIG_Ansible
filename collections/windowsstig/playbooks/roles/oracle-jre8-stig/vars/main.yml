@@ -1,6 +1,6 @@
 ---
 # vars file for base
 gitrepo: "https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script/archive/refs/heads/master.zip"
-gitdir: " C:\\temp\\master.zip"
+gitdir: "C:\\temp\\master.zip"
 gitname: "Oracle-JRE-8-STIG-Script"
-zipdir: " C:\\temp\\{{ gitname }}"
+zipdir: "C:\\temp\\{{ gitname }}"
