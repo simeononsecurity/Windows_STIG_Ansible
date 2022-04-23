@@ -37,12 +37,12 @@
 
 - name: Run the STIG Script
   ansible.windows.win_powershell:
-    chdir: "{{ gitdir }}"
+    chdir: "{{ zipdir }}"
     script: |
       try{
-      
-        powershell.exe -ExecutionPolicy ByPass -File "{{ zipdir }}/*.ps1"
-
+        foreach $script in (Get-Childitem -recurse *.ps1).fullname){
+          powershell.exe -ExecutionPolicy ByPass -File "$script"
+        }
       } Catch {
 
         $Ansible.failed = $true
