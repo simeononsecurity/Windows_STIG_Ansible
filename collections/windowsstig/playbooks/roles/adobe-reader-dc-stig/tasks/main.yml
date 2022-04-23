@@ -1,10 +1,10 @@
 ---
 # tasks file for base
-- name: Download {{ gitname }} to specified path only if modified
+- name: Download STIG files to specified path
   ansible.windows.win_get_url:
     url: "{{ gitrepo }}"
     dest: "{{ gitdir }}"
-    force: no
+    force: yes
 
 - name: Fix Windows Path Character Limit
   ansible.windows.win_regedit:
@@ -13,7 +13,7 @@
     data: 1
     type: dword
 
-# Unzip .zip file, recursively decompresses the contained zips and removes all unneeded compressed files after completion.
+# Unzip STIG .zip file, recursively decompresses the contained zips and removes all unneeded compressed files after completion.
 - name: Recursively decompress zip files
   community.windows.win_unzip:
     src: "{{ gitdir }}"
