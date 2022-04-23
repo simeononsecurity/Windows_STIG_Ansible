@@ -1,10 +1,10 @@
 ---
 # vars file for base
 gitrepo:
-  - https://github.com/simeononsecurity/Standalone-Windows-STIG-Script/archive/refs/heads/master.zip
+  - "https://github.com/simeononsecurity/Standalone-Windows-STIG-Script/archive/refs/heads/master.zip"
 gitdir:
   - "{{ ansible_env.TEMP }}\\master.zip"
 gitname:
-  - Standalone-Windows-STIG-Script
+  - "Standalone-Windows-STIG-Script"
 zipdir:
   - "{{ ansible_env.TEMP }}\\{{ gitname }}"

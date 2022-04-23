@@ -1,10 +1,10 @@
 ---
 # vars file for base
 gitrepo:
-  - https://github.com/simeononsecurity/Windows-Defender-STIG-Script/archive/refs/heads/main.zip
+  - "https://github.com/simeononsecurity/Windows-Defender-STIG-Script/archive/refs/heads/main.zip"
 gitdir:
   - "{{ ansible_env.TEMP }}\\main.zip"
 gitname:
-  - Windows-Defender-STIG-Script
+  - "Windows-Defender-STIG-Script"
 zipdir:
   - "{{ ansible_env.TEMP }}\\{{ gitname }}"
