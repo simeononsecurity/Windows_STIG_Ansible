@@ -1,9 +1,21 @@
 ---
 # tasks file for base
+
+- name: Debug VARs
+  ansible.builtin.debug:
+    msg: "Gitrepo is {{ gitrepo }}"
+  ansible.builtin.debug:
+    msg: "Gitdir is {{ gitdir }}"
+  ansible.builtin.debug:
+    msg: "Gitname is {{ gitname }}"
+  ansible.builtin.debug:
+    msg: "Zipdir is {{ ziprepo }}"
+
 - name: Download STIG files to specified path
   ansible.windows.win_get_url:
     url: "{{ gitrepo }}"
     dest: "{{ gitdir }}"
+    follow_redirects: all
     force: yes
 
 - name: Fix Windows Path Character Limit
