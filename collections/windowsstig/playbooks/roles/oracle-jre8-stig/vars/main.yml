@@ -1,6 +1,10 @@
 ---
 # vars file for base
 gitrepo:
-  - https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script.git
+  - https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script/archive/refs/heads/master.zip
 gitdir:
-  - C:\temp\Oracle-JRE-8-STIG-Script
+  - "{{ ansible_env.TEMP }}\\master.zip"
+gitname:
+  - Oracle-JRE-8-STIG-Script
+zipdir:
+  - "{{ ansible_env.TEMP }}\\{{ gitname }}"

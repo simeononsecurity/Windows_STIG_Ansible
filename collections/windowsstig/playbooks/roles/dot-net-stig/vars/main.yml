@@ -1,6 +1,10 @@
 ---
 # vars file for base
 gitrepo:
-  - https://github.com/simeononsecurity/.NET-STIG-Script.git
+  - https://github.com/simeononsecurity/.NET-STIG-Script/archive/refs/heads/master.zip
 gitdir:
-  - C:\temp\.NET-STIG-Script
+  - "{{ ansible_env.TEMP }}\\master.zip"
+gitname:
+  - .NET-STIG-Script
+zipdir:
+  - "{{ ansible_env.TEMP }}\\{{ gitname }}"

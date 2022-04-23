@@ -1,26 +1,25 @@
 ---
 # tasks file for base
-
-- name: Check if python is already installed
-  ansible.windows.win_powershell:
-    script: try{python -v; write-output "true"}catch{write-output "false"}
-  register: python_already_exists
-  ignore_errors: yes
-
-- name: Installing python using Chocolatey
-  chocolatey.chocolatey.win_chocolatey:
-    name: python
-    state: present
-    allow_empty_checksums: yes
-  ignore_errors: yes
-  when: python_already_exists != true
-
-- name: Download Github Repo "{{ gitrepo }}"
-  ansible.builtin.git:
-    repo: "{{ gitrepo }}"
+- name: Download {{ gitname }} to specified path only if modified
+  ansible.windows.win_get_url:
+    url: "{{ gitrepo }}"
     dest: "{{ gitdir }}"
-  environment:
-    GIT_TERMINAL_PROMPT: 0
+    force: no
+
+- name: Fix Windows Path Character Limit
+  ansible.windows.win_regedit:
+    path: HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem
+    name: LongPathsEnabled
+    data: 1
+    type: dword
+
+# Unzip .zip file, recursively decompresses the contained zips and removes all unneeded compressed files after completion.
+- name: Recursively decompress zip files
+  community.windows.win_unzip:
+    src: "{{ gitdir }}"
+    dest: "{{ zipdir }}"
+    recurse: yes
+    delete_archive: yes
 
 - name: Run the STIG Script
   ansible.windows.win_powershell:
@@ -28,16 +27,10 @@
     script: |
       try{
       
-        powershell.exe -ExecutionPolicy ByPass -File "{{ gitdir }}"/*.ps1
+        powershell.exe -ExecutionPolicy ByPass -File "{{ zipdir }}/*.ps1"
 
       } Catch {
 
         $Ansible.failed = $true
 
       }  
-
-- name: Uninstall python using Chocolatey
-  chocolatey.chocolatey.win_chocolatey:
-    name: python
-    state: absent
-  when:  python_already_exists != true
