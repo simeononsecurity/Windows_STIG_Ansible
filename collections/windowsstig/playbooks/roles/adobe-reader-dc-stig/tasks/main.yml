@@ -12,7 +12,7 @@
     name: python
     state: present
     allow_empty_checksums: yes
-  when: python_already_exists = None
+  when: python_already_exists = {{ none }}
 
 - name: Download Github Repo "{{ gitrepo }}"
   ansible.builtin.git:
@@ -39,4 +39,4 @@
   chocolatey.chocolatey.win_chocolatey:
     name: python
     state: absent
-  when:  python_already_exists = None
+  when:  python_already_exists = {{ none }}
