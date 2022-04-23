@@ -2,5 +2,5 @@
 # vars file for base
 gitrepo:
   - https://github.com/simeononsecurity/Windows-Defender-STIG-Script.git
-git:
-  - Windows-Defender-STIG-Script
+gitdir:
+  - C:\temp\Windows-Defender-STIG-Script

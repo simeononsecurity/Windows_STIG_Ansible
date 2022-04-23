@@ -2,5 +2,5 @@
 # vars file for base
 gitrepo:
   - https://github.com/simeononsecurity/STIG-Compliant-Domain-Prep.git
-git:
-  - STIG-Compliant-Domain-Prep
+gitdir:
+  - C:\temp\STIG-Compliant-Domain-Prep

@@ -2,5 +2,5 @@
 # vars file for base
 gitrepo:
   - https://github.com/simeononsecurity/Adobe-Reader-DC-STIG-Script.git
-git:
-  - Adobe-Reader-DC-STIG-Script
+gitdir:
+  - C:\temp\Adobe-Reader-DC-STIG-Script
