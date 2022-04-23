@@ -40,7 +40,7 @@
     chdir: "{{ zipdir }}"
     script: |
       try{
-        foreach $script in (Get-Childitem -recurse *.ps1).fullname){
+        foreach $script in ((Get-Childitem -recurse *.ps1).fullname){
           powershell.exe -ExecutionPolicy ByPass -File "$script"
         }
       } Catch {
