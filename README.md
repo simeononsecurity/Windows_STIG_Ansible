@@ -2,10 +2,17 @@
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
 
-## Usage
+## Notes:
+- Currently requires online connections
+
+## Usage:
 
 
 
+## Installation:
+```bash
+ansible-galaxy collection install simeononsecurity.windows_stigs
+```
 
 ## Based on:
 - [simeononsecurity/STIG-Compliant-Domain-Prep](https://github.com/simeononsecurity/STIG-Compliant-Domain-Prep)
