@@ -11,8 +11,6 @@ dependencies:
     "chocolatey.chocolatey": "*"
     "ansible.windows": "*"
     "community.windows": "*"
-license:
-    - "GPL-3.0-or-later"
 license_file: LICENSE
 tags:
     - collection
