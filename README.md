@@ -3,7 +3,7 @@ Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
 
 ## Notes:
-- Currently requires online connections
+- Currently requires internet connectivity. (Offline compatibility WIP)
 
 ## Usage:
 
