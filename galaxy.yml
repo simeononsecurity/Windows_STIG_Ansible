@@ -1,12 +1,10 @@
 namespace: "simeononsecurity"
-name: "Windows_STIG_Ansible"
+name: "windows_stigs"
 description: "Ansible Playbooks for SimeonOnSecurity's STIG Scripts"
 version: "1.0.0"
 readme: "README.md"
-homepage:
-    - "https://simeononsecurity.ch"
-issues:
-    - "https://github.com/simeononsecurity/Windows_STIG_Ansible/issues"
+homepage: "https://simeononsecurity.ch"
+issues: "https://github.com/simeononsecurity/Windows_STIG_Ansible/issues"
 authors:
     - "SimeonOnSecurity (https://simeononsecurity.ch)"
 dependencies:
@@ -14,9 +12,8 @@ dependencies:
     "ansible.windows": "*"
     "community.windows": "*"
 license:
-    - "GPLv3"
-license_file: 
-    - LICENSE
+    - "GPL-3.0-or-later"
+license_file: LICENSE
 tags:
     - collection
     - windows
