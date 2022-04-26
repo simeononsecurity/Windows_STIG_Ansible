@@ -10,6 +10,7 @@ Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
 
 ## Installation:
+- [Ansible Galaxy](https://galaxy.ansible.com/simeononsecurity/windows_stigs)
 ```bash
 ansible-galaxy collection install simeononsecurity.windows_stigs
 ```
