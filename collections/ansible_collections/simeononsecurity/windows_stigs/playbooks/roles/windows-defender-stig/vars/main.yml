@@ -4,3 +4,4 @@ gitrepo: "https://github.com/simeononsecurity/Windows-Defender-STIG-Script/archi
 gitdir: "C:\\temp\\main.zip"
 gitname: "Windows-Defender-STIG-Script"
 zipdir: "C:\\temp\\{{ gitname }}"
+copyzipdir: "{{gitname}}-main.zip"

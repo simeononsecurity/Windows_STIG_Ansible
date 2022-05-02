@@ -4,3 +4,4 @@ gitrepo: "https://github.com/simeononsecurity/Standalone-Windows-Server-STIG-Scr
 gitdir: "C:\\temp\\master.zip"
 gitname: "Standalone-Windows-Server-STIG-Script"
 zipdir: "C:\\temp\\{{ gitname }}"
+copyzipdir: "{{gitname}}-master.zip"

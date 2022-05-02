@@ -4,3 +4,4 @@ gitrepo: "https://github.com/simeononsecurity/FireFox-STIG-Script/archive/refs/h
 gitdir: "C:\\temp\\master.zip"
 gitname: "FireFox-STIG-Script"
 zipdir: "C:\\temp\\{{ gitname }}"
+copyzipdir: "{{gitname}}-master.zip"

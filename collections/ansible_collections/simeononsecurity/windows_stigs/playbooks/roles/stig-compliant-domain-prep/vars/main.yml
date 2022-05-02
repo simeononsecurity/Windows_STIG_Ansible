@@ -4,3 +4,4 @@ gitrepo: "https://github.com/simeononsecurity/STIG-Compliant-Domain-Prep/archive
 gitdir: "C:\\temp\\master.zip"
 gitname: "STIG-Compliant-Domain-Prep"
 zipdir: "C:\\temp\\{{ gitname }}"
+copyzipdir: "{{gitname}}-master.zip"
