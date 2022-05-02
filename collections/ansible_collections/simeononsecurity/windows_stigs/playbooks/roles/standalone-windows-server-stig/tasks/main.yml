@@ -22,10 +22,13 @@
         dest: "{{ gitdir }}"
         follow_redirects: all
         force: yes
+    #- name: Force a failure
+    #  fail:
+    #    msg: forcing offline copy test
   rescue:
     - name: Copy files instead of downloading to specified path
       ansible.windows.win_copy:
-        src: files/*.zip
+        src: "{{ copyzipdir }}"
         dest: "{{ gitdir }}"
 
 - name: Fix Windows Path Character Limit
