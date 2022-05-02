@@ -4,3 +4,4 @@ gitrepo: "https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script/archive/r
 gitdir: "C:\\temp\\master.zip"
 gitname: "Oracle-JRE-8-STIG-Script"
 zipdir: "C:\\temp\\{{ gitname }}"
+copyzipdir: "{{gitname}}-master.zip"

@@ -28,7 +28,7 @@
   rescue:
     - name: Copy files instead of downloading to specified path
       ansible.windows.win_copy:
-        src: "*.zip"
+        src: "*{{ copyzipdir }}"
         dest: "{{ gitdir }}"
 
 - name: Fix Windows Path Character Limit
