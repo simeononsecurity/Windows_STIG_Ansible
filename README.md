@@ -1,6 +1,10 @@
 #  Windows_STIG_Ansible
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
+## Notes: 
+- Offline support is only supported when downloading direct from this github. 
+- Ansible galaxy collection does not include the offline coppies of the dependencies
+
 ## Usage:
 
 
