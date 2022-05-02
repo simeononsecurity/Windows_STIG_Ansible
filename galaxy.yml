@@ -23,3 +23,5 @@ build_ignore:
 - .github
 - .gitattributes
 - .gitignore
+- */files/*master.zip
+- */files/*main.zip
