@@ -1,6 +1,5 @@
 ---
 dependencies:
-  - chocolatey.chocolatey
   - ansible.windows
   - community.windows
   - community.general
