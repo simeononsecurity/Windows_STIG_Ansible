@@ -1,10 +1,6 @@
 #  Windows_STIG_Ansible
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
-
-## Notes:
-- Currently requires internet connectivity. (Offline compatibility WIP)
-
 ## Usage:
 
 
