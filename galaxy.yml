@@ -8,9 +8,6 @@ issues: "https://github.com/simeononsecurity/Windows_STIG_Ansible/issues"
 repository: "https://github.com/simeononsecurity/Windows_STIG_Ansible"
 authors:
     - "SimeonOnSecurity (https://simeononsecurity.ch)"
-platforms:
-    - name: windows
-      versions: all
 dependencies:
     "chocolatey.chocolatey": "*"
     "ansible.windows": "*"
