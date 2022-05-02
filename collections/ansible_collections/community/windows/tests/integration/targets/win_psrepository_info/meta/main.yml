@@ -1,3 +1,0 @@
-dependencies:
-  - setup_http_tests
-  - setup_win_psget

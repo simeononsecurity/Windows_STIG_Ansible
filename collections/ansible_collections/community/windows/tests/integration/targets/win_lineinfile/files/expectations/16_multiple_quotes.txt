@@ -1,5 +1,0 @@
-var dotenv = require('dotenv');
-dotenv.load();
-'foo'
-import g'
-"quote" and "unquote"

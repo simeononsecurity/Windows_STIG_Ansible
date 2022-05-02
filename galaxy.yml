@@ -19,9 +19,6 @@ tags:
     - chocolatey
     - package
 build_ignore:
-- collections/ansible_collections/general*
 - .github
 - .gitattributes
 - .gitignore
-- */files/*master.zip
-- */files/*main.zip

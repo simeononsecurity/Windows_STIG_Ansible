@@ -1,2 +1,0 @@
-win_zip_name: .ÅÑŚÌβŁÈ [$!@^&test(;)] 👋
-win_zip_dir: '{{ remote_tmp_dir }}\win_zip {{ win_zip_name }}'
