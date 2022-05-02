@@ -1,0 +1,56 @@
+---
+- name: install NSSM
+  chocolatey.chocolatey.win_chocolatey:
+    name: NSSM
+    state: present
+
+- name: ensure testing folder exists
+  ansible.windows.win_file:
+    path: '{{test_win_nssm_path}}'
+    state: directory
+
+- name: create test user for service execution
+  ansible.windows.win_user:
+    name: '{{test_win_nssm_username}}'
+    password: '{{test_win_nssm_password}}'
+    state: present
+    groups_action: add
+    groups:
+    - Users
+  register: user_info
+
+# Run actual tests
+- block:
+  - name: normalise test account name
+    ansible.windows.win_powershell:
+      parameters:
+        SID: '{{ user_info.sid }}'
+      script: |
+        [CmdletBinding()]
+        param ([String]$SID)
+
+        $Ansible.Changed = $false
+        ([System.Security.Principal.SecurityIdentifier]$SID).Translate([System.Security.Principal.NTAccount]).Value
+    register: test_win_nssm_normalised_username
+
+  - set_fact:
+      test_win_nssm_normalised_username: '{{ test_win_nssm_normalised_username.output[0] }}'
+
+  - include_tasks: tests.yml
+
+  always:
+    - name: ensure test service is absent
+      ansible.windows.win_service:
+        name: '{{ test_service_name }}'
+        state: absent
+
+    - name: remove test user
+      ansible.windows.win_user:
+        name: '{{test_win_nssm_username}}'
+        state: absent
+
+    - name: uninstall NSSM
+      chocolatey.chocolatey.win_chocolatey:
+        name: NSSM
+        state: absent
+      failed_when: false

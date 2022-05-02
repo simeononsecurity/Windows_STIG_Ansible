@@ -1,0 +1,47 @@
+---
+- name: ensure task is deleted before test
+  win_scheduled_task:
+    name: '{{test_scheduled_task_stat_name}}'
+    path: '{{test_scheduled_task_stat_path}}'
+    state: absent
+
+- name: create test user for service execution
+  ansible.windows.win_user:
+    name: '{{test_scheduled_task_stat_username}}'
+    password: '{{test_scheduled_task_stat_password}}'
+    state: present
+    groups_action: add
+    groups:
+    - Users
+  register: user_info
+
+# Run actual tests
+- block:
+  - name: normalise test account name
+    ansible.windows.win_powershell:
+      parameters:
+        SID: '{{ user_info.sid }}'
+      script: |
+        [CmdletBinding()]
+        param ([String]$SID)
+
+        $Ansible.Changed = $false
+        ([System.Security.Principal.SecurityIdentifier]$SID).Translate([System.Security.Principal.NTAccount]).Value
+    register: test_normalised_username
+
+  - set_fact:
+      test_normalised_username: '{{ test_normalised_username.output[0] }}'
+
+  - include_tasks: tests.yml
+
+  always:
+  - name: remove test user
+    ansible.windows.win_user:
+      name: '{{test_scheduled_task_stat_username}}'
+      state: absent
+
+  - name: delete task after test
+    win_scheduled_task:
+      name: '{{test_scheduled_task_stat_name}}'
+      path: '{{test_scheduled_task_stat_path}}'
+      state: absent
