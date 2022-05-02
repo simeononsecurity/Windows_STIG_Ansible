@@ -1,9 +1,11 @@
+[![Ansible Galaxy](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml)
+
 #  Windows_STIG_Ansible
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
-
-## Notes:
-- Currently requires internet connectivity. (Offline compatibility WIP)
+## Notes: 
+- Offline support is only supported when downloading direct from this github. 
+- Ansible galaxy collection does not include the offline copies of the dependencies
 
 ## Usage:
 
