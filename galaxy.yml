@@ -9,7 +9,6 @@ repository: "https://github.com/simeononsecurity/Windows_STIG_Ansible"
 authors:
     - "SimeonOnSecurity (https://simeononsecurity.ch)"
 dependencies:
-    "chocolatey.chocolatey": "*"
     "ansible.windows": "*"
     "community.windows": "*"
     "community.general": "*"
@@ -19,3 +18,8 @@ tags:
     - windows
     - chocolatey
     - package
+build_ignore:
+- collections/ansible_collections/general*
+- .github
+- .gitattributes
+- .gitignore
