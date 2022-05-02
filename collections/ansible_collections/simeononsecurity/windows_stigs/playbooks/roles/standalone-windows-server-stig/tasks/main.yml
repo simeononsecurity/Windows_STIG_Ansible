@@ -14,12 +14,19 @@
   ansible.builtin.debug:
     msg: "Zipdir is {{ zipdir }}"
 
-- name: Download STIG files to specified path
-  ansible.windows.win_get_url:
-    url: "{{ gitrepo }}"
-    dest: "{{ gitdir }}"
-    follow_redirects: all
-    force: yes
+- name: Download/Copy STIG files to specified path
+  block:
+    - name: Download STIG files to specified path
+      ansible.windows.win_get_url:
+        url: "{{ gitrepo }}"
+        dest: "{{ gitdir }}"
+        follow_redirects: all
+        force: yes
+  rescue:
+    - name: Copy files instead of downloading to specified path
+      ansible.windows.win_copy:
+        src: files/*.zip
+        dest: "{{ gitdir }}"
 
 - name: Fix Windows Path Character Limit
   ansible.windows.win_regedit:
