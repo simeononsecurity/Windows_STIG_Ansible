@@ -2,6 +2,5 @@ docroot
 /tmp
 .DS_Store
 ._*
-*.gz
 .vagrant
 *.log
