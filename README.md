@@ -6,6 +6,8 @@ Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 ## Notes: 
 - Offline support is only supported when downloading direct from this github. 
 - Ansible galaxy collection does not include the offline copies of the dependencies
+
+## Requirements:
 - Requires you have secure WinRM over HTTPS already configured on your Windows Systems
  - Read the following for more information:
   - [Ansible - Setting up a Windows Host](https://docs.ansible.com/ansible/2.5/user_guide/windows_setup.html)
