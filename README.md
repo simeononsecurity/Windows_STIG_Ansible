@@ -9,6 +9,7 @@ Ansible Playbooks for SimeonOnSecurity's STIG Scripts
 
 ## Requirements:
 - Requires you have secure WinRM over HTTPS already configured on your Windows Systems
+  - STIGs mandate you have WinRM over HTTPs if you use WinRM. This in mind, this collection enforces changes that enforce WinRM over HTTPs. If you're using plaintext WinRM this collection will break your communication with your windows hosts.
   - Read the following for more information:
     - [Ansible - Setting up a Windows Host](https://docs.ansible.com/ansible/2.5/user_guide/windows_setup.html)
     - [Microsoft - Security Considerations for PowerShell Remoting using WinRM](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-7.2)
