@@ -1,4 +1,4 @@
-[![Ansible Galaxy](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml)
+[![Ansible Galaxy](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml)[![VirusTotal Scan](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/virustotal.yml)
 
 #  Windows_STIG_Ansible
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
