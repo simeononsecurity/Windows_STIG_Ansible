@@ -3,11 +3,11 @@ name: "windows_stigs"
 description: "Ansible Playbooks for SimeonOnSecurity's STIG Scripts"
 version: "1.1.0"
 readme: "README.md"
-homepage: "https://simeononsecurity.ch"
+homepage: "https://simeononsecurity.com"
 issues: "https://github.com/simeononsecurity/Windows_STIG_Ansible/issues"
 repository: "https://github.com/simeononsecurity/Windows_STIG_Ansible"
 authors:
-    - "SimeonOnSecurity (https://simeononsecurity.ch)"
+    - "SimeonOnSecurity (https://simeononsecurity.com)"
 dependencies:
     "ansible.windows": "*"
     "community.windows": "*"
