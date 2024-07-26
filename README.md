@@ -1,7 +1,9 @@
-[![Ansible Galaxy](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml)[![VirusTotal Scan](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/virustotal.yml)
-
 #  Windows_STIG_Ansible
+
 Ansible Playbooks for SimeonOnSecurity's STIG Scripts
+
+ [![Sponsor](https://img.shields.io/badge/Sponsor-Click%20Here-ff69b4)](https://github.com/sponsors/simeononsecurity) [![Ansible Galaxy](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/ansible_galaxy_collection.yml)[![VirusTotal Scan](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/Windows_STIG_Ansible/actions/workflows/virustotal.yml)
+
 
 ## Notes: 
 - Offline support is only supported when downloading direct from this github. 
